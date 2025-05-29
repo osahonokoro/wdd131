@@ -1,0 +1,88 @@
+:root {
+    --primary-color: #861504;
+    --secondary-color: #FFFFFF;
+    --accent-color: #2B303A;
+    --text-color: #2B303A;
+    --bg-color: #F7F7F7;
+    --font-family: 'Segoe UI', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+header {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 1rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    list-style: none;
+    gap: 1rem;
+    padding: 0.5rem 0;
+    background-color: var(--accent-color);
+}
+
+nav a {
+    color: var(--secondary-color);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.weather {
+    padding: 1rem;
+    text-align: center;
+    background: #E0E0E0;
+    position: relative;
+    color: #000000;
+    /* Ensures text is legible on #E0E0E0 */
+}
+
+.weather h2 {
+    font-size: 1.5rem;
+    position: relative;
+}
+
+.weather h2::after {
+    content: '⛅';
+    margin-left: 0.5rem;
+}
+
+footer {
+    background: var(--accent-color);
+    color: var(--secondary-color);
+    text-align: center;
+    padding: 1rem;
+}
+
+/* Media Queries */
+@media (min-width: 600px) {
+    nav ul {
+        justify-content: space-evenly;
+    }
+
+    .weather {
+        max-width: 600px;
+        margin: auto;
+    }
+}

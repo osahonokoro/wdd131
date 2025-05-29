@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Visit Yakutsk</title>
+    <link rel="stylesheet" href="css/place.css" />
+    <script src="js/place.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <h1>Explore Yakutsk</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Attractions</a></li>
+                <li><a href="#">Weather</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <picture>
+                <source srcset="images/winter_in_yakutsk.webp" media="(min-width: 600px)" />
+                <img src="images/everyday_in_yakutsk.webp" alt="Beautiful view of Yakutsk" />
+            </picture>
+        </section>
+
+        <section class="weather">
+            <h2>Weather <span class="icon">⛅</span></h2>
+            <p>Temperature: <span id="temp">40</span>°F</p>
+            <p>Wind Speed: <span id="wind">10</span> mph</p>
+            <p>Wind Chill: <span id="chill">Calculating...</span></p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> | Last Modified: <span id="lastModified"></span></p>
+    </footer>
+</body>
+
+</html>
