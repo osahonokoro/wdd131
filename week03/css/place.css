@@ -55,7 +55,6 @@ nav a {
     background: #E0E0E0;
     position: relative;
     color: #000000;
-    /* Ensures text is legible on #E0E0E0 */
 }
 
 .weather h2 {
@@ -63,9 +62,18 @@ nav a {
     position: relative;
 }
 
-.weather h2::after {
-    content: '⛅';
-    margin-left: 0.5rem;
+.icon-wide {
+    font-size: 1rem;
+    vertical-align: middle;
+    margin-left: 0.4rem;
+}
+
+.icon-mobile {
+
+    height: 1rem;
+    width: auto;
+    vertical-align: middle;
+    margin-left: 0.4rem;
 }
 
 footer {
