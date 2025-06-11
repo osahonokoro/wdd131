@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Research Hub Projects</title>
+    <link rel="stylesheet" href="styles/siteplan.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet" />
+    <style>
+        /* Simple styling for demo */
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 20px;
+            background: #f9f9f9;
+            color: #222;
+        }
+
+        h1,
+        h2 {
+            color: #00539C;
+        }
+
+        .filters {
+            margin-bottom: 20px;
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .filters label {
+            font-weight: 600;
+            margin-right: 6px;
+        }
+
+        select {
+            padding: 5px 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+
+        section.project-category {
+            margin-bottom: 40px;
+            background: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 8px rgba(0, 0, 0, 0.05);
+        }
+
+        article.project-item {
+            margin-bottom: 15px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #eee;
+        }
+
+        article.project-item:last-child {
+            border-bottom: none;
+        }
+
+        .project-title {
+            font-weight: 700;
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .project-meta {
+            font-size: 0.9rem;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Research Hub Projects</h1>
+
+    <!-- Filters -->
+    <div class="filters" role="region" aria-label="Project Filters">
+        <div>
+            <label for="filter-year">Year:</label>
+            <select id="filter-year" name="filter-year">
+                <option value="all">All</option>
+                <option value="2025">2025</option>
+                <option value="2024">2024</option>
+                <option value="2023">2023</option>
+            </select>
+        </div>
+        <div>
+            <label for="filter-department">Department:</label>
+            <select id="filter-department" name="filter-department">
+                <option value="all">All</option>
+                <option value="computer-science">Computer Science</option>
+                <option value="electronics">Electronics</option>
+                <option value="robotics">Robotics</option>
+            </select>
+        </div>
+        <div>
+            <label for="filter-area">Research Area:</label>
+            <select id="filter-area" name="filter-area">
+                <option value="all">All</option>
+                <option value="iot">IoT Technologies</option>
+                <option value="ai">AI & Machine Learning</option>
+                <option value="cybersecurity">Cybersecurity</option>
+                <option value="automation">Robotics & Automation</option>
+                <option value="healthtech">HealthTech & Medical IoT</option>
+                <option value="agriculture">Precision Agriculture</option>
+            </select>
+        </div>
+    </div>
+
+    <!-- Ongoing Projects -->
+    <section class="project-category" id="ongoing-projects">
+        <h2>Ongoing Projects</h2>
+        <article class="project-item" data-year="2025" data-department="computer-science" data-area="iot">
+            <div class="project-title">Smart Traffic Management System</div>
+            <div class="project-meta">2025 | Computer Science | IoT Technologies</div>
+            <p>Developing an IoT-based traffic flow optimization platform using real-time sensor data and AI algorithms.
+            </p>
+        </article>
+        <article class="project-item" data-year="2024" data-department="robotics" data-area="automation">
+            <div class="project-title">Autonomous Warehouse Robots</div>
+            <div class="project-meta">2024 | Robotics | Robotics & Automation</div>
+            <p>Designing robots capable of autonomous navigation and inventory management in warehouses.</p>
+        </article>
+    </section>
+    <section id="ongoing-projects" class="py-12 px-4 bg-gray-100">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold mb-6 text-center text-gray-800">Ongoing Projects</h2>
+
+            <!-- place card here-->
+        </div> 
+
+        <!-- Modal for Detailed View -->
+        <div id="modal-godwin"
+            class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+            <div class="bg-white w-full max-w-3xl p-6 rounded-lg shadow-lg overflow-y-auto max-h-[90vh] relative">
+                <button onclick="hideModal('modal-godwin')"
+                    class="absolute top-2 right-4 text-gray-600 hover:text-black text-xl">&times;</button>
+                <h3 class="text-2xl font-bold text-blue-700 mb-4">Simulation of an AI-Driven IoT Street Lighting System
+                </h3>
+                <p><strong>Researcher:</strong> Agbama Godwin Ebene</p>
+                <p><strong>Department:</strong> Computer Science</p>
+                <p><strong>Year:</strong> 2025</p>
+                <p><strong>Research Area:</strong> Smart Cities / IoT / AI</p>
+                <hr class="my-4">
+                <div class="prose max-w-none">
+                    <h4>Background of the Study</h4>
+                    <p>Street lighting plays a vital role in urban safety, but traditional systems consume excessive
+                        energy.
+                        This project proposes a simulation-based design of smart lighting systems that leverage IoT
+                        sensors
+                        and AI models to adapt lighting conditions based on real-time traffic data.</p>
+
+                    <h4>Problem Statement</h4>
+                    <p>Conventional lighting systems lead to power waste. This project addresses the high energy costs
+                        and
+                        carbon emissions by simulating a smarter, AI-controlled alternative using network and AI tools.
+                    </p>
+
+                    <h4>Aim and Objectives</h4>
+                    <ul>
+                        <li>Review smart lighting and AI optimization methods.</li>
+                        <li>Design and simulate an intelligent lighting system in MATLAB.</li>
+                        <li>Evaluate energy efficiency and system responsiveness.</li>
+                        <li>Propose a real-world deployment plan based on findings.</li>
+                    </ul>
+
+                    <h4>Methodology</h4>
+                    <ul>
+                        <li>Data from open sources (Kaggle, transport agencies).</li>
+                        <li>Simulate IoT lighting network in MATLAB.</li>
+                        <li>Apply machine learning for adaptive control.</li>
+                        <li>Compare results with traditional lighting systems.</li>
+                    </ul>
+
+                    <h4>Significance</h4>
+                    <p>Provides a low-cost pathway to smart lighting for developing regions. Supports smart city goals
+                        by
+                        showing feasibility before real deployment.</p>
+
+                    <h4>Scope</h4>
+                    <ul>
+                        <li>Focuses on simulation, not physical implementation.</li>
+                        <li>Excludes hardware deployment challenges.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal JS -->
+    <script>
+        function showModal(id) {
+            document.getElementById(id).classList.remove('hidden');
+        }
+        function hideModal(id) {
+            document.getElementById(id).classList.add('hidden');
+        }
+    </script>
+
+
+    <!-- Completed Projects -->
+    <section class="project-category" id="completed-projects">
+        <h2>Completed Projects</h2>
+        <article class="project-item" data-year="2023" data-department="electronics" data-area="cybersecurity">
+            <div class="project-title">IoT Device Security Framework</div>
+            <div class="project-meta">2023 | Electronics | Cybersecurity</div>
+            <p>Created a lightweight security protocol tailored for resource-constrained IoT devices.</p>
+        </article>
+    </section>
+
+    <!-- Student Startups / Incubated Ideas -->
+    <section class="project-category" id="startups">
+        <h2>Student Startups / Incubated Ideas</h2>
+        <article class="project-item" data-year="2024" data-department="computer-science" data-area="healthtech">
+            <div class="project-title">Wearable Health Monitor</div>
+            <div class="project-meta">2024 | Computer Science | HealthTech & Medical IoT</div>
+            <p>A startup focused on developing affordable wearable devices for continuous health monitoring.</p>
+        </article>
+    </section>
+
+    <script>
+        // Simple filter function
+        const filters = {
+            year: 'all',
+            department: 'all',
+            area: 'all',
+        };
+
+        function filterProjects() {
+            const projects = document.querySelectorAll('.project-item');
+            projects.forEach(project => {
+                const matchYear = filters.year === 'all' || project.dataset.year === filters.year;
+                const matchDepartment = filters.department === 'all' || project.dataset.department === filters.department;
+                const matchArea = filters.area === 'all' || project.dataset.area === filters.area;
+
+                if (matchYear && matchDepartment && matchArea) {
+                    project.style.display = '';
+                } else {
+                    project.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('filter-year').addEventListener('change', e => {
+            filters.year = e.target.value;
+            filterProjects();
+        });
+
+        document.getElementById('filter-department').addEventListener('change', e => {
+            filters.department = e.target.value;
+            filterProjects();
+        });
+
+        document.getElementById('filter-area').addEventListener('change', e => {
+            filters.area = e.target.value;
+            filterProjects();
+        });
+    </script>
+</body>
+
+</html>
