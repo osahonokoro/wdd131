@@ -1,16 +1,24 @@
 .container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 1rem;
     padding: 1rem;
 }
 
-figure {
+/* Float-based layout for temple cards */
+.container figure {
+    float: left;
+    width: 300px;
+    margin: 0.5rem;
     background: white;
     padding: 1rem;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+}
+
+/* Clearfix to contain floats */
+.container::after {
+    content: "";
+    display: table;
+    clear: both;
 }
 
 img {
@@ -23,6 +31,5 @@ img {
     font-family: "Roboto", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
-    /* Change to 100 for thinner text */
     font-style: normal;
 }
