@@ -18,3 +18,11 @@ img {
     height: auto;
     border-radius: 8px;
 }
+
+.roboto-text {
+    font-family: "Roboto", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    /* Change to 100 for thinner text */
+    font-style: normal;
+}
