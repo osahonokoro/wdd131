@@ -1,3 +1,5 @@
+console.log("JavaScript file is loaded!");
+
 // Ensure the script runs after the DOM is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // 1. Update the Footer Year and Last Modified Date
