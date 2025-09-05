@@ -1,0 +1,87 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "main aside"
+        "footer footer";
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    grid-area: header;
+    background-color: #004466;
+    color: white;
+    padding: 1rem;
+}
+
+/* Navigation inside header */
+nav ul {
+    display: flex;
+    /* Arrange list items in a row */
+    gap: 1rem;
+    /* Space between links */
+    list-style: none;
+    /* Remove bullets */
+    padding: 0;
+    /* Remove default padding */
+    margin: 0;
+    /* Remove default margin */
+}
+
+nav a {
+    text-decoration: none;
+    /* Remove underline */
+    color: white;
+    /* Link text color */
+    padding: 0.5rem 1rem;
+    /* Clickable area */
+    background-color: #006699;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+    background-color: #0099cc;
+}
+
+nav {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+/* Main content */
+main {
+    grid-area: main;
+    padding: 1rem;
+    background-color: white;
+}
+
+/* Sidebar */
+aside {
+    grid-area: aside;
+    padding: 1rem;
+    background-color: #e6f2f5;
+}
+
+/* Footer */
+footer {
+    grid-area: footer;
+    background-color: #004466;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+}
