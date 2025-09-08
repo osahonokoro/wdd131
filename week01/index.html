@@ -11,151 +11,120 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet" />
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
     <script src="scripts/getdates.js" defer></script>
 </head>
 
 <body>
-    <!-- Header (full width in Holy Grail) -->
+    <!-- Header -->
     <header>
-        <h1>
-            WDD131 – Dynamic Web Fundamentals –
-            <span class="highlight-name">Osahon Okoro</span>
-        </h1>
-
+        <h1>WDD131 – Dynamic Web Fundamentals – <span class="highlight-name">Osahon Okoro</span></h1>
         <nav aria-label="Main navigation">
             <ul>
                 <li><a href="https://www.linkedin.com/in/sydnet-osahon-b81ba8241/" target="_blank"
                         rel="noopener">LinkedIn</a></li>
                 <li><a href="https://byupw.instructure.com/" target="_blank" rel="noopener">Canvas</a></li>
                 <li><a href="https://www.churchofjesuschrist.org/study/scriptures" target="_blank"
-                        rel="noopener">Latter-day Saints</a></li>
-                <li><a href="#" rel="noopener">Final Project</a></li>
+                        rel="noopener">Scripture</a></li>
+                <li><a href="#">Final Project</a></li>
             </ul>
         </nav>
     </header>
 
-    <!-- Left Sidebar -->
-    <aside class="left-side" aria-label="Sidebar with quick links">
-        <h3>Quick Links</h3>
-        <ul>
-            <li><a href="#about-me">About Me</a></li>
-            <li><a href="#resources">Web Dev Resources</a></li>
-            <li><a href="#nigeria">Nigeria</a></li>
-        </ul>
+    <!-- Main Content Area -->
+    <main class="grid-main">
+        <!-- Left Column -->
+        <section class="left-column">
+            <!-- About Me -->
+            <div class="card about-me">
+                <h2>About Me</h2>
+                <img src="images/osahon.jpg" alt="Photo of Osahon Okoro" class="about-img" />
+                <p>
+                    My name is Osahon Okoro, an academic and technology consultant deeply committed to solving
+                    real-world
+                    problems through innovation. I currently serve as an Assistant Research Lecturer in the Department
+                    of Computer Science at
+                    the University of Calabar, Nigeria. With a background in Electrical and Electronics Engineering
+                    (University of Benin)
+                    and a Master’s in Computer Science (University of Calabar), I am now completing a Ph.D. in Computer
+                    Science, focusing my
+                    research on emerging security technologies.
+                </p>
+                <p>
+                    I am actively training and equipping myself in the fields of machine learning, computer vision, and
+                    network security —
+                    with a clear mission: to develop intelligent security solutions that can support authorities in
+                    tackling Nigeria’s
+                    pressing security challenges. My goal is to bridge the gap between advanced research and practical
+                    implementation,
+                    particularly through smart surveillance, anomaly detection, and IoT-enabled monitoring systems.
+                </p>
+                <p>
+                    Through my consulting firm, Sydnet Solutions Limited, established in 2012, I have led several
+                    projects across
+                    the public and private sectors, including work with international organizations like the United
+                    Nations. I believe
+                    technology — when localized and purposefully applied — can become a cornerstone in strengthening
+                    national and
+                    community security in Nigeria.
+                </p>
+                <p>
+                    Outside work, I enjoy reading, cooking, traveling, and playing chess — activities that continue to
+                    sharpen both
+                    my creativity and strategic thinking.
+                </p>
+            </div>
 
-        <h3>Contact</h3>
-        <ul>
-            <li><a href="mailto:okorodoe@gmail.com">Email</a></li>
-            <li><a href="https://github.com/osahonokoro" target="_blank" rel="noopener">GitHub</a></li>
-            <li><a href="https://www.linkedin.com/in/sydnet-osahon-b81ba8241/" target="_blank"
-                    rel="noopener">LinkedIn</a></li>
-        </ul>
-    </aside>
-
-    <!-- Main Content (cards live here) -->
-    <main class="container" id="main-content">
-        <!-- About Me -->
-        <section class="card" id="about-me">
-            <h2>About Me</h2>
-            <img src="images/osahon.jpg" alt="Photo of Osahon Okoro" class="about-img" />
-            <p>
-                My name is Osahon Okoro, an academic and technology consultant deeply committed to solving real-world
-                problems
-                through innovation. I currently serve as an Assistant Research Lecturer in the Department of Computer
-                Science at
-                the University of Calabar, Nigeria. With a background in Electrical and Electronics Engineering
-                (University of Benin)
-                and a Master’s in Computer Science (University of Calabar), I am now completing a Ph.D. in Computer
-                Science, focusing
-                my research on emerging security technologies.
-            </p>
-            <p>
-                I am actively training and equipping myself in the fields of machine learning, computer vision, and
-                network security —
-                with a clear mission: to develop intelligent security solutions that can support authorities in tackling
-                Nigeria’s
-                pressing security challenges. My goal is to bridge the gap between advanced research and practical
-                implementation,
-                particularly through smart surveillance, anomaly detection, and IoT-enabled monitoring systems.
-            </p>
-            <p>
-                Through my consulting firm, Sydnet Solutions Limited, established in 2012, I have led several projects
-                across
-                the public and private sectors, including work with international organizations like the United Nations.
-                I believe
-                technology — when localized and purposefully applied — can become a cornerstone in strengthening
-                national and
-                community security in Nigeria.
-            </p>
-            <p>
-                Outside work, I enjoy reading, cooking, traveling, and playing chess — activities that continue to
-                sharpen both
-                my creativity and strategic thinking.
-            </p>
+            <!-- About Nigeria -->
+            <div class="card about-nigeria">
+                <h2>About Nigeria</h2>
+                <img src="images/nigeria.jpeg" alt="Flag of Nigeria" class="country-img" />
+                <p>
+                    <strong>Nigeria</strong>, officially the Federal Republic of Nigeria, is a West African nation
+                    bordered
+                    by Niger, Chad, Cameroon, and Benin. It spans over 923,000 square kilometers and is home to more
+                    than
+                    230 million people—making it Africa’s most populous country and the sixth-most populous in the
+                    world.
+                    Its capital is Abuja, while Lagos is the largest city and one of the biggest metropolitan areas
+                    globally.
+                    Nigeria has a rich and diverse history, with ancient civilizations like the Nok culture, the Hausa
+                    Kingdoms
+                    in the north, the Yoruba empires in the southwest, and the Benin and Igbo kingdoms in the south and
+                    southeast.
+                    British colonization in the 19th century led to the formation of modern-day Nigeria, which gained
+                    independence
+                    on October 1, 1960. Since then, it has faced civil war, military rule, and democratic
+                    transitions—<em>stories that touch</em>
+                    the heart and reflect the country's resilience.
+                </p>
+                <p>
+                    With over 250 ethnic groups and more than 500 spoken languages, Nigeria is a true cultural mosaic.
+                    The
+                    three largest ethnic groups are the Hausa, Yoruba, and Igbo. English is the official language, and
+                    the
+                    country is nearly evenly split between Islam and Christianity. Known as the <strong>"Giant of
+                        Africa"</strong>, Nigeria plays a key role in regional and global affairs, with a growing
+                    economy
+                    and a powerful cultural influence through music, film, and literature.
+                </p>
+            </div>
         </section>
 
-        <!-- Web Dev Resources -->
-        <section class="card" id="resources">
-            <h2>Web Dev Resources</h2>
-            <ul>
-                <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
-                <li><a href="https://osahonokoro.github.io/wdd130/wwr" target="_blank" rel="noopener">Osahon Okoro -
-                        WDD130</a></li>
-                <li>
-                    <a href="https://github.com/osahonokoro/anomaly-detection-isolationforest-cicids2017"
-                        target="_blank" rel="noopener">
-                        Data Analysis: GitHub - ML Anomaly Detection Project
-                    </a>
-                </li>
-                <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
-            </ul>
-        </section>
-
-        <!-- Nigeria -->
-        <section class="card" id="nigeria">
-            <h2>Nigeria</h2>
-            <img src="images/nigeria.jpeg" alt="Flag of Nigeria" class="country-img" />
-            <p>
-                <strong>Nigeria</strong>, officially the Federal Republic of Nigeria, is a West African nation bordered
-                by Niger, Chad, Cameroon, and Benin. It spans over 923,000 square kilometers and is home to more than
-                230 million people—making it Africa’s most populous country and the sixth-most populous in the world.
-                Its capital is Abuja, while Lagos is the largest city and one of the biggest metropolitan areas
-                globally.
-                Nigeria has a rich and diverse history, with ancient civilizations like the Nok culture, the Hausa
-                Kingdoms
-                in the north, the Yoruba empires in the southwest, and the Benin and Igbo kingdoms in the south and
-                southeast.
-                British colonization in the 19th century led to the formation of modern-day Nigeria, which gained
-                independence
-                on October 1, 1960. Since then, it has faced civil war, military rule, and democratic
-                transitions—<em>stories that touch</em>
-                the heart and reflect the country's resilience.
-            </p>
-            <p>
-                With over 250 ethnic groups and more than 500 spoken languages, Nigeria is a true cultural mosaic. The
-                three largest ethnic groups are the Hausa, Yoruba, and Igbo. English is the official language, and the
-                country is nearly evenly split between Islam and Christianity. Known as the <strong>"Giant of
-                    Africa"</strong>, Nigeria plays a key role in regional and global affairs, with a growing economy
-                and a powerful cultural influence through music, film, and literature.
-            </p>
+        <!-- Right Column -->
+        <section class="right-column">
+            <div class="card web-tools">
+                <h2>Web Dev Tools</h2>
+                <ul>
+                    <li><a href="https://dev.to" target="_blank" rel="noopener">Dev.to Community</a></li>
+                    <li><a href="https://github.com/osahonokoro" target="_blank" rel="noopener">GitHub Projects</a></li>
+                    <li><a href="https://www.w3schools.com" target="_blank" rel="noopener">W3Schools</a></li>
+                    <li><a href="https://code.visualstudio.com/" target="_blank" rel="noopener">VS Code</a></li>
+                </ul>
+            </div>
         </section>
     </main>
 
-    <!-- Right Sidebar -->
-    <aside class="right-side" aria-label="Sidebar with updates">
-        <h3>Updates</h3>
-        <ul>
-            <li>New article: Smart Surveillance and IoT</li>
-            <li>Working on final project proposal</li>
-            <li>Exploring computer vision datasets</li>
-        </ul>
-
-        <h3>Now Reading</h3>
-        <p>Research papers on anomaly detection and edge AI.</p>
-    </aside>
-
-    <!-- Footer (full width in Holy Grail) -->
+    <!-- Footer -->
     <footer>
         <p>&copy; <span id="year"></span> Osahon Okoro | Nigeria</p>
         <p>Last Modified: <span id="lastModified"></span></p>
@@ -163,4 +132,3 @@
 </body>
 
 </html>
-```
