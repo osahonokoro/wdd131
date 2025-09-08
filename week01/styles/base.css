@@ -61,7 +61,7 @@ nav a:focus {
 /* Main Grid */
 .grid-main {
     display: grid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 2fr;
     gap: 2rem;
     padding: 2rem;
 }
