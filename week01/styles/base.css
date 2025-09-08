@@ -24,6 +24,10 @@ body {
     color: var(--text-color);
 }
 
+p {
+    text-align: justify;
+}
+
 /* Header */
 header {
     background-color: var(--primary-color);
