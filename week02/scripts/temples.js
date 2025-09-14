@@ -4,39 +4,39 @@ document.addEventListener("DOMContentLoaded", function () {
     const yearSpan = document.getElementById("year");
     const lastModifiedSpan = document.getElementById("lastModified");
 
-    // Set the current year dynamically
-    const currentYear = new Date().getFullYear();
-    yearSpan.textContent = currentYear;
+    yearSpan.textContent = new Date().getFullYear();
+    lastModifiedSpan.textContent = document.lastModified;
 
-    // Set the last modified date dynamically
-    const lastModifiedDate = document.lastModified;
-    lastModifiedSpan.textContent = lastModifiedDate;
-
-    // 2. Implement the Responsive Hamburger Menu Toggle
+    // 2. Responsive Hamburger Menu Toggle
     const hamburgerButton = document.getElementById("hamburger");
     const navMenu = document.getElementById("navMenu");
 
-    // Toggle menu visibility when clicking the hamburger button
+    // Accessibility attributes
+    hamburgerButton.setAttribute("aria-expanded", "false");
+    hamburgerButton.setAttribute("aria-controls", "navMenu");
+
+    // Toggle menu visibility
     hamburgerButton.addEventListener("click", function () {
-        if (navMenu.style.display === "none" || navMenu.style.display === "") {
-            navMenu.style.display = "flex"; // Show menu
-            hamburgerButton.innerHTML = "✖"; // Change to 'X' symbol
-        } else {
-            navMenu.style.display = "none"; // Hide menu
-            hamburgerButton.innerHTML = "&#9776;"; // Change back to hamburger icon
-        }
+        const isOpen = navMenu.classList.toggle("open");
+
+        // Update button icon and accessibility state
+        hamburgerButton.textContent = isOpen ? "✖" : "☰";
+        hamburgerButton.setAttribute("aria-expanded", isOpen.toString());
     });
 
-    // Ensure the menu is hidden by default on mobile view
+    // Set initial menu state based on screen size
     function checkScreenSize() {
         if (window.innerWidth > 768) {
-            navMenu.style.display = "flex"; // Show menu on larger screens
+            navMenu.classList.add("open");
+            hamburgerButton.textContent = "✖";
+            hamburgerButton.setAttribute("aria-expanded", "true");
         } else {
-            navMenu.style.display = "none"; // Hide menu on mobile
+            navMenu.classList.remove("open");
+            hamburgerButton.textContent = "☰";
+            hamburgerButton.setAttribute("aria-expanded", "false");
         }
     }
 
-    // Run the function on page load and when resizing
     checkScreenSize();
     window.addEventListener("resize", checkScreenSize);
 });

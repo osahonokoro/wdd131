@@ -1,22 +1,30 @@
 @media (min-width: 768px) {
+
+    /* Navigation menu styles for large screens */
     nav {
         display: flex !important;
         justify-content: space-evenly;
         flex-direction: row;
+        background-color: #0a9396;
+        padding: 0.5rem;
     }
 
+    /* Hide hamburger icon on large screens */
     #hamburger {
         display: none;
     }
 
+    /* Responsive grid layout for temple figures */
     .container {
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1rem;
         padding: 1rem;
+        max-width: 1200px;
+        margin: 0 auto;
     }
-    
-    /* Make all figures consistent */
+
+    /* Consistent figure styling */
     figure {
         margin: 0;
         padding: 0;
@@ -26,14 +34,22 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     }
-    
-    /* Resize images to same dimensions */
+
+    /* Uniform image sizing */
     figure img {
         width: 100%;
-        height: 200px; /* or any fixed value */
+        height: 200px;
         object-fit: cover;
         display: block;
+        border-bottom: 1px solid #ddd;
     }
-    
+
+    /* Optional: style figcaptions for better readability */
+    figcaption {
+        padding: 0.5rem;
+        font-weight: bold;
+        color: #333;
+    }
 }

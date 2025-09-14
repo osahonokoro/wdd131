@@ -26,11 +26,32 @@ header {
     cursor: pointer;
 }
 
+/* Base nav styles */
 nav {
     display: none;
     flex-direction: column;
     background-color: #0a9396;
     padding: 0.5rem;
+}
+
+/* Show nav when .open class is added */
+nav.open {
+    display: flex;
+}
+
+/* Larger screens: show nav by default */
+@media (min-width: 768px) {
+    nav {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    #hamburger {
+        display: none;
+        /* Hide hamburger on large screens */
+    }
 }
 
 nav a {
@@ -52,11 +73,19 @@ main {
 
 .container {
     display: grid;
-    grid-template-columns: 1fr; /* Single column by default */
+    grid-template-columns: 1fr;
+    /* Single column by default */
     gap: 1rem;
     padding: 1rem;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+/* Responsive grid for larger screens */
+@media (min-width: 768px) {
+    .container {
+        grid-template-columns: repeat(3, 1fr);
+    }
 }
 
 figure {
