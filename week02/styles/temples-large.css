@@ -1,0 +1,39 @@
+@media (min-width: 768px) {
+    nav {
+        display: flex !important;
+        justify-content: space-evenly;
+        flex-direction: row;
+    }
+
+    #hamburger {
+        display: none;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1rem;
+        padding: 1rem;
+    }
+    
+    /* Make all figures consistent */
+    figure {
+        margin: 0;
+        padding: 0;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    /* Resize images to same dimensions */
+    figure img {
+        width: 100%;
+        height: 200px; /* or any fixed value */
+        object-fit: cover;
+        display: block;
+    }
+    
+}
