@@ -1,0 +1,196 @@
+/* ===============================
+   Base Styles
+   =============================== */
+:root {
+  --primary: #2C3E50;
+  /* Deep Indigo */
+  --accent: #1ABC9C;
+  /* Teal Blue */
+  --highlight: #F9E79F;
+  /* Warm Sand */
+  --bg: #F4F4F4;
+  /* Soft Gray */
+  --text: #333333;
+  /* Charcoal */
+}
+
+body {
+  display: grid;
+  grid-template-areas:
+    "header"
+    "main-image"
+    "data"
+    "weather"
+    "gallery"
+    "footer";
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 1rem;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: var(--bg);
+  color: var(--text);
+}
+
+/* ===============================
+   Typography
+   =============================== */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 100;
+  color: var(--primary);
+}
+
+strong,
+em {
+  font-family: 'Roboto Serif', serif;
+  font-weight: 400;
+}
+
+/* ===============================
+   Header & Navigation
+   =============================== */
+header {
+  grid-area: header;
+  background-color: var(--primary);
+  color: white;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0 0;
+}
+
+nav a {
+  background-color: var(--accent);
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+nav a:hover {
+  background-color: var(--highlight);
+  color: var(--primary);
+}
+
+/* ===============================
+   Hero Image
+   =============================== */
+.main-image {
+  grid-area: main-image;
+  text-align: center;
+}
+
+.main-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* ===============================
+   Data & Weather Sections
+   =============================== */
+.data,
+.weather {
+  padding: 1rem;
+  background-color: #e6f2f5;
+  border-radius: 8px;
+}
+
+.data {
+  grid-area: data;
+}
+
+.weather {
+  grid-area: weather;
+}
+
+.data-row,
+.weather-row {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+}
+
+/* ===============================
+   Gallery
+   =============================== */
+.gallery {
+  grid-area: gallery;
+  text-align: center;
+}
+
+.responsive-img {
+  width: 500px;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin: 1rem auto;
+}
+
+/* Shrink images on mobile */
+@media screen and (max-width: 600px) {
+  .responsive-img {
+    width: 200px;
+  }
+}
+
+/* ===============================
+   Footer
+   =============================== */
+footer {
+  grid-area: footer;
+  background-color: var(--primary);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  border-radius: 6px;
+}
+
+/* ===============================
+   Desktop Layout
+   =============================== */
+@media screen and (min-width: 900px) {
+  body {
+    grid-template-areas:
+      "header header"
+      "main-image main-image"
+      "data weather"
+      "gallery gallery"
+      "footer footer";
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .main-image {
+    margin-bottom: 1rem;
+  }
+
+  /* Weather icon swap: hide image, show Unicode symbol */
+  .weather img {
+    display: none;
+  }
+
+  .weather h2::after {
+    content: " ⛅";
+    /* Unicode weather symbol */
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+  }
+}
