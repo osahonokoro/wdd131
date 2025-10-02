@@ -1,0 +1,109 @@
+body {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+}
+
+.top-bar {
+    background: #f0f0f0;
+    padding: 8px 20px;
+    font-size: 14px;
+    display: flex;
+    justify-content: space-between;
+}
+
+header {
+    background: #002f87;
+    color: white;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header .logo {
+    font-size: 20px;
+    font-weight: 800;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn-cta {
+    background: #fdd835;
+    border: none;
+    padding: 10px 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    padding: 40px 20px;
+    background: white;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.hero-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    background: #002f87;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 4px;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    flex: 1;
+}
+
+.tiles {
+    display: flex;
+    justify-content: space-around;
+    padding: 30px 10px;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.tile {
+    background: white;
+    border: 1px solid #eee;
+    padding: 20px;
+    border-radius: 10px;
+    flex: 1 1 150px;
+    text-align: center;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.tile.active,
+.tile:hover {
+    background: #002f87;
+    color: white;
+}
