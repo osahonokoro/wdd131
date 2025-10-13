@@ -260,6 +260,14 @@ footer {
     color: white;
     font-size: 0.9rem;
 }
+footer a {
+    color: white;
+    text-decoration: underline;
+}
+
+footer a:hover {
+    color: #94d2bd;
+}
 
 /* Responsive Design */
 
