@@ -15,12 +15,18 @@ body {
     background-color: var(--background-color);
     color: var(--text-color);
     line-height: 2;
+    font-size: 1.1rem;
 }
 
 p {
     margin-bottom: 2rem;
     text-align: justify;
     text-justify: inter-word;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 /* Header */
@@ -84,6 +90,8 @@ nav.nav-right a:hover {
 /* Main Content */
 main {
     padding: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
 }
 
 /* Holy Grail Two-Column Layout (index.html) */
@@ -92,7 +100,6 @@ main {
     flex-wrap: wrap;
     gap: 2rem;
     margin: 2rem auto;
-    max-width: 1000px;
     align-items: stretch;
 }
 
@@ -103,6 +110,7 @@ main {
     flex-direction: column;
     justify-content: center;
     text-align: justify;
+    padding: 1rem;
 }
 
 .intro-image {
@@ -113,12 +121,12 @@ main {
 }
 
 .intro-image img {
-    width: 100%;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
 
+/* Welcome Heading */
 .welcome-heading {
     text-align: center;
     margin-top: 2rem;
@@ -130,17 +138,16 @@ main {
     flex-wrap: wrap;
     gap: 2rem;
     margin: 2rem auto;
-    max-width: 1000px;
     justify-content: space-between;
 }
 
 .column {
     flex: 1;
     min-width: 280px;
+    padding: 1rem;
 }
 
 .column img {
-    width: 100%;
     border-radius: 8px;
     object-fit: cover;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
@@ -148,15 +155,13 @@ main {
 
 /* Enhanced layout for image column */
 .image-column {
-    flex: 2; /* Takes up more space than other columns */
+    flex: 2;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .image-column img {
-    max-width: 100%;
-    height: auto;
     border-radius: 8px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
 }
@@ -172,6 +177,10 @@ main {
     font-weight: bold;
     color: var(--accent-color);
     text-decoration: underline;
+}
+
+.cta a:hover {
+    color: #0077cc;
 }
 
 /* Form Styling */
@@ -253,7 +262,47 @@ footer {
 }
 
 /* Responsive Design */
+
+/* Tablet View */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    .logo img {
+        height: 120px;
+    }
+
+    .intro-text,
+    .column {
+        padding: 1rem;
+    }
+
+    .cta {
+        margin: 2rem 1rem;
+    }
+
+    nav.nav-right {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav.nav-right a {
+        margin: 0.5rem 0;
+    }
+}
+
+/* Mobile View */
 @media (max-width: 600px) {
+    body {
+        font-size: 0.95rem;
+        padding: 1rem;
+    }
+
+    header h1 {
+        font-size: 1.25rem;
+    }
+
     form {
         padding: 1rem;
     }
@@ -266,15 +315,6 @@ footer {
 
     input[type="submit"] {
         width: 100%;
-    }
-
-    nav.nav-right {
-        flex-direction: column;
-        align-items: flex-end;
-    }
-
-    nav.nav-right a {
-        margin: 0.5rem 0;
     }
 
     .intro-row,
