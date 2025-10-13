@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Review Submitted</title>
+    <link rel="stylesheet" href="style/style.css" />
+</head>
+
+<body>
+    <header>
+        <h1>Thank You!</h1>
+    </header>
+
+    <main class="review-main">
+        <p>Your interest has been submitted successfully. We appreciate your commitment to purpose-driven investing and
+            sustainable aquaculture.</p>
+        <p>Total submissions so far: <span id="reviewCount"></span></p>
+    </main>
+
+    <footer>
+        <p>© 2025 Osahon Okoro | WDD 131</p>
+    </footer>
+
+    <script>
+        let count = localStorage.getItem("reviewCount") || 0;
+        count++;
+        localStorage.setItem("reviewCount", count);
+        document.getElementById("reviewCount").textContent = count;
+    </script>
+</body>
+
+</html>
