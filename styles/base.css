@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --primary-color: #4b4c9b;
+    --accent-color: #a5a6d9;
+    --light-bg: #f0f0f8;
+    --card-bg: #ffffff;
+    --text-color: #2c2d68;
+    --hover-bg: #7788c0;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--light-bg);
+    color: var(--text-color);
+}
+
+p {
+    text-align: justify;
+}
+
+/* Header */
+header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    list-style: none;
+    margin-top: 1rem;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+nav a:hover,
+nav a:focus {
+    background-color: var(--hover-bg);
+}
+
+/* Main Grid */
+.grid-main {
+    display: grid;
+    grid-template-columns: auto 2fr;
+    gap: 2rem;
+    padding: 2rem;
+}
+
+/* Left Column with Nested Grid */
+.left-column {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 2rem;
+}
+
+/* Right Column */
+.right-column {
+    display: block;
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* Clearfix for floated images */
+.card::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.card h2 {
+    margin-bottom: 1rem;
+    color: var(--primary-color);
+    font-size: 1.5rem;
+}
+
+/* Image Styles */
+.about-me .about-img {
+    float: right;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 0 0 1rem 1rem;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+.about-nigeria .country-img {
+    float: left;
+    max-width: 300px;
+    width: 100%;
+    height: auto;
+    margin: 0 1rem 1rem 0;
+    border-radius: 6px;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Footer */
+footer {
+    background-color: var(--primary-color);
+    color: white;
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* Highlighted Name */
+.highlight-name {
+    color: var(--accent-color);
+    font-weight: bold;
+    font-style: italic;
+}
+
+/* Responsive Layout */
+@media (max-width: 768px) {
+    .grid-main {
+        grid-template-columns: 1fr;
+    }
+
+    .left-column {
+        grid-template-rows: auto auto;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-me .about-img,
+    .about-nigeria .country-img {
+        float: none;
+        display: block;
+        margin: 0 auto 1rem;
+        max-width: 100%;
+    }
+}
