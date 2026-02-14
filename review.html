@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WDD 131 - Review Confirmation</title>
+    <meta name="description" content="Product review confirmation page">
+    <meta name="author" content="Osahon Okoro">
+    <link rel="stylesheet" href="week05/style/style.css">
+    <script src="week05/script/review.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-content">
+            <h1>Review Submitted Successfully!</h1>
+        </div>
+    </header>
+
+    <main class="confirmation-main">
+        <div class="confirmation-card">
+            <div class="checkmark">✓</div>
+            <h2>Thank You for Your Review</h2>
+            <p>Your feedback helps us improve our products and services.</p>
+
+            <div class="review-counter">
+                <p class="counter-label">Total Reviews Submitted:</p>
+                <div class="counter-display">
+                    <span id="review-count" class="review-count">0</span>
+                    <span class="counter-text">reviews</span>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <a href="form.html" class="back-link">← Submit Another Review</a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="currentyear"></span> | Osahon Okoro | Brigham Young University-Idaho</p>
+        <p id="lastModified"></p>
+    </footer>
+</body>
+
+</html>

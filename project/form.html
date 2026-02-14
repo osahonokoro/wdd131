@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Investor Interest Form | BlueFin Capital</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="Project/style/style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="logo">
+            <img src="Project/images/bluefin-logo.png" alt="BlueFin Capital Logo" />
+            <h1>Investment Interest Form</h1>
+        </div>
+        <div class="nav-wrapper">
+            <nav class="nav-right">
+                <a href="Project/index.html">Overview</a>
+                <a href="Project/how-it-works.html">Farm Model</a>
+                <a href="form.html">Invest Now</a>
+            </nav>
+        </div>
+    </header>
+<main>
+        <form method="get" action="Project/review.html">
+            <!-- Investment Package -->
+            <label for="package">Investment Package:</label>
+            <select id="package" name="package" required>
+                <option value="" disabled selected>Select a Package...</option>
+                <!-- Options populated by JS -->
+            </select>
+
+            <!-- Interest Level -->
+            <fieldset>
+                <legend>Interest Level:</legend>
+                <label><input type="radio" name="interestLevel" id="level1" value="1" required /> ☆</label>
+                <label><input type="radio" name="interestLevel" id="level2" value="2" /> ☆☆</label>
+                <label><input type="radio" name="interestLevel" id="level3" value="3" /> ☆☆☆</label>
+                <label><input type="radio" name="interestLevel" id="level4" value="4" /> ☆☆☆☆</label>
+                <label><input type="radio" name="interestLevel" id="level5" value="5" /> ☆☆☆☆☆</label>
+            </fieldset>
+
+            <!-- Preferred Start Date -->
+            <label for="startDate">Preferred Start Date:</label>
+            <input type="date" id="startDate" name="startDate" required />
+
+            <!-- Interest Areas -->
+            <fieldset>
+                <legend>What interests you most in our Offerings?</legend>
+                <label><input type="checkbox" id="roi" name="interestArea" value="Profit Potential" /> Profit
+                    Potential</label>
+                <label><input type="checkbox" id="transparency" name="interestArea" value="Transparency" />
+                    Transparency</label>
+                <label><input type="checkbox" id="impact" name="interestArea" value="Food Security Impact" /> Food
+                    Security Impact</label>
+                <label><input type="checkbox" id="escrow" name="interestArea" value="Escrow Protection" /> Escrow
+                    Protection</label>
+            </fieldset>
+
+            <!-- Message -->
+            <label for="message">Message or Questions:</label>
+            <textarea id="message" name="message" rows="4"></textarea>
+
+            <!-- Full Name -->
+            <label for="fullname">Full Name:</label>
+            <input type="text" id="fullname" name="fullname" required />
+
+            <!-- Submit -->
+            <input type="submit" value="Submit Interest" />
+        </form>
+    </main>
+
+    <footer>
+        <p>© 2025 Osahon Okoro | WDD 131 | <a href="Project/references.html">References</a></p>
+    </footer>
+
+    <script src="Project/script/form.js"></script>
+</body>
+
+</html>
