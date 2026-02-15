@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueFin Capital | Invest Now</title>
+    <meta name="description" content="Start investing in sustainable food security projects with BlueFin Capital.">
+    <meta name="author" content="Osahon Okoro">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/investments.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/bluefin-logo.webp" alt="BlueFin Capital Logo" class="logo" loading="eager">
+            <h1>BlueFin Capital</h1>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">Farm Model</a></li>
+                <li><a href="invest.html" class="active">Invest Now</a></li>
+                <li><a href="references.html">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="invest-main">
+        <h1 class="page-title">Start Your Investment Journey</h1>
+
+        <div class="invest-grid">
+            <!-- Investment Form Section -->
+            <div class="invest-form-container">
+                <h2>Investment Application</h2>
+                <form action="review.html" method="get" id="investment-form" class="investment-form">
+                    <!-- Investment Package (Dynamic from array) -->
+                    <div class="form-group">
+                        <label for="package">Investment Package <span class="required">*</span></label>
+                        <select id="package" name="package" required>
+                            <option value="" disabled selected>Select a Package...</option>
+                            <!-- Populated by JavaScript -->
+                        </select>
+                    </div>
+
+                    <!-- Investment Amount -->
+                    <div class="form-group">
+                        <label for="amount">Investment Amount ($) <span class="required">*</span></label>
+                        <input type="number" id="amount" name="amount" min="1000" max="100000" step="1000" required>
+                        <small>Minimum: $1,000 | Maximum: $100,000</small>
+                    </div>
+
+                    <!-- Interest Level (Rating) -->
+                    <fieldset class="rating-fieldset">
+                        <legend>Interest Level <span class="required">*</span></legend>
+                        <div class="rating-options">
+                            <label class="rating-label">
+                                <input type="radio" name="interestLevel" value="1" required>
+                                <span class="stars">★☆☆☆☆</span>
+                                <span>Low Interest</span>
+                            </label>
+                            <label class="rating-label">
+                                <input type="radio" name="interestLevel" value="2">
+                                <span class="stars">★★☆☆☆</span>
+                                <span>Mild Interest</span>
+                            </label>
+                            <label class="rating-label">
+                                <input type="radio" name="interestLevel" value="3">
+                                <span class="stars">★★★☆☆</span>
+                                <span>Moderate Interest</span>
+                            </label>
+                            <label class="rating-label">
+                                <input type="radio" name="interestLevel" value="4">
+                                <span class="stars">★★★★☆</span>
+                                <span>High Interest</span>
+                            </label>
+                            <label class="rating-label">
+                                <input type="radio" name="interestLevel" value="5">
+                                <span class="stars">★★★★★</span>
+                                <span>Very High Interest</span>
+                            </label>
+                        </div>
+                    </fieldset>
+
+                    <!-- Preferred Start Date -->
+                    <div class="form-group">
+                        <label for="startDate">Preferred Start Date <span class="required">*</span></label>
+                        <input type="date" id="startDate" name="startDate" required>
+                    </div>
+
+                    <!-- Interest Areas (Checkboxes) -->
+                    <fieldset>
+                        <legend>Areas of Interest</legend>
+                        <div class="checkbox-group" id="interest-areas">
+                            <!-- Populated by JavaScript -->
+                        </div>
+                    </fieldset>
+
+                    <!-- Message/Questions -->
+                    <div class="form-group">
+                        <label for="message">Questions or Comments</label>
+                        <textarea id="message" name="message" rows="4"
+                            placeholder="Ask us anything about the investment..."></textarea>
+                    </div>
+
+                    <!-- Personal Information -->
+                    <div class="form-group">
+                        <label for="fullname">Full Name <span class="required">*</span></label>
+                        <input type="text" id="fullname" name="fullname" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email Address <span class="required">*</span></label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone">
+                    </div>
+
+                    <!-- Agreement Checkbox -->
+                    <div class="form-group checkbox-group">
+                        <label class="checkbox-label">
+                            <input type="checkbox" id="agree" name="agree" required>
+                            <span>I understand that investments involve risk and I have read the <a
+                                    href="references.html">disclaimer</a> <span class="required">*</span></span>
+                        </label>
+                    </div>
+
+                    <!-- Submit Button -->
+                    <button type="submit" class="submit-btn">Submit Investment Interest</button>
+                </form>
+            </div>
+
+            <!-- Investment Summary Sidebar -->
+            <aside class="investment-summary">
+                <h3>Investment Summary</h3>
+                <div id="live-summary">
+                    <p>Select a package to see details</p>
+                </div>
+                <div class="recent-investments">
+                    <h4>Recent Investments</h4>
+                    <div id="recent-investments-list">
+                        <!-- Populated from localStorage -->
+                    </div>
+                </div>
+                <div class="disclaimer">
+                    <p>* All investments are secured via escrow. Past performance doesn't guarantee future returns.</p>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <!-- Same footer as index.html -->
+    </footer>
+</body>
+
+</html>

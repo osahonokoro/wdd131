@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BlueFin Capital | References</title>
+    <meta name="description" content="References and citations for BlueFin Capital website content.">
+    <meta name="author" content="Osahon Okoro">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <div class="logo-container">
+            <img src="images/bluefin-logo.webp" alt="BlueFin Capital Logo" class="logo" loading="eager">
+            <h1>BlueFin Capital</h1>
+        </div>
+        <button class="mobile-menu-toggle" aria-label="Menu">☰</button>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="how-it-works.html">Farm Model</a></li>
+                <li><a href="invest.html">Invest Now</a></li>
+                <li><a href="references.html" class="active">References</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="references-main">
+        <h1 class="page-title">References & Citations</h1>
+        
+        <div class="references-content">
+            <section class="reference-section">
+                <h2>Images</h2>
+                <ul class="reference-list">
+                    <li>
+                        <strong>Hero Farm Image:</strong> 
+                        <a href="https://unsplash.com/photos/..." target="_blank" rel="noopener">Unsplash - Sustainable Agriculture</a>
+                        <br><small>License: Unsplash License (Free for commercial use)</small>
+                    </li>
+                    <li>
+                        <strong>Aquaculture Image:</strong> 
+                        <a href="https://www.pexels.com/photo/..." target="_blank" rel="noopener">Pexels - Fish Farming</a>
+                        <br><small>License: Pexels License (Free for commercial use)</small>
+                    </li>
+                    <li>
+                        <strong>Hydroponics Image:</strong> 
+                        <a href="https://pixabay.com/photos/..." target="_blank" rel="noopener">Pixabay - Hydroponic Farming</a>
+                        <br><small>License: Pixabay License (Free for commercial use)</small>
+                    </li>
+                    <li>
+                        <strong>Poultry Image:</strong> 
+                        <a href="https://www.freeimages.com/..." target="_blank" rel="noopener">FreeImages - Free Range Chickens</a>
+                        <br><small>License: FreeImages Standard License</small>
+                    </li>
+                    <li>
+                        <strong>Logo Design:</strong> 
+                        Original creation using Canva
+                    </li>
+                </ul>
+            </section>
+
+            <section class="reference-section">
+                <h2>Content & Statistics</h2>
+                <ul class="reference-list">
+                    <li>
+                        <strong>Aquaculture Statistics:</strong> 
+                        FAO. (2024). "The State of World Fisheries and Aquaculture." 
+                        <a href="https://www.fao.org/fishery/en/publications" target="_blank" rel="noopener">https://www.fao.org/fishery/en/publications</a>
+                    </li>
+                    <li>
+                        <strong>Hydroponics Data:</strong> 
+                        USDA. (2023). "Controlled Environment Agriculture Report." 
+                        <a href="https://www.usda.gov/topics/farming/controlled-environment-agriculture" target="_blank" rel="noopener">https://www.usda.gov/topics/farming/controlled-environment-agriculture</a>
+                    </li>
+                    <li>
+                        <strong>Poultry Industry:</strong> 
+                        National Chicken Council. (2024). "U.S. Broiler Industry Statistics." 
+                        <a href="https://www.nationalchickencouncil.org/statistics/" target="_blank" rel="noopener">https://www.nationalchickencouncil.org/statistics/</a>
+                    </li>
+                    <li>
+                        <strong>Investment Returns Data:</strong> 
+                        AgFunder. (2023). "AgriFood Tech Investment Report." 
+                        <a href="https://agfunder.com/research/" target="_blank" rel="noopener">https://agfunder.com/research/</a>
+                    </li>
+                </ul>
+            </section>
+
+            <section class="reference-section">
+                <h2>Technical Resources</h2>
+                <ul class="reference-list">
+                    <li>
+                        <strong>Fonts:</strong> Google Fonts - Roboto. 
+                        <a href="https://fonts.google.com/specimen/Roboto" target="_blank" rel="noopener">https://fonts.google.com/specimen/Roboto</a>
+                    </li>
+                    <li>
+                        <strong>Icons:</strong> Unicode characters and emojis
+                    </li>
+                    <li>
+                        <strong>Color Palette:</strong> Coolors.co - Generated custom scheme
+                    </li>
+                    <li>
+                        <strong>CSS Reset:</strong> Custom implementation
+                    </li>
+                </ul>
+            </section>
+
+            <section class="reference-section">
+                <h2>Disclaimer</h2>
+                <div class="disclaimer-box">
+                    <p>This website is a student project created for educational purposes at Brigham Young University-Idaho. All investment information is hypothetical and for demonstration only. Not intended for actual investment decisions.</p>
+                    <p>Images and content used under appropriate licenses or as educational fair use. All trademarks and copyrights belong to their respective owners.</p>
+                    <p>Last updated: <span id="reference-date"></span></p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>BlueFin Capital</h4>
+                <p>Student Project - WDD 131</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="how-it-works.html">Farm Model</a></li>
+                    <li><a href="invest.html">Invest Now</a></li>
+                    <li><a href="references.html">References</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>BYU-Idaho</h4>
+                <p><a href="https://www.byui.edu" target="_blank" rel="noopener">byui.edu</a></p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; <span id="currentyear"></span> | Osahon Okoro | Brigham Young University-Idaho</p>
+            <p id="lastModified"></p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('reference-date').textContent = new Date().toLocaleDateString();
+    </script>
+</body>
+</html>
