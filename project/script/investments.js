@@ -1,10 +1,29 @@
 // Investment packages array
 const investmentPackages = [
-    { id: 'pkg-001', name: 'Starter Poultry', minAmount: 1000, maxAmount: 10000, returns: '8-10%', term: '1 year' },
-    { id: 'pkg-002', name: 'Growth Hydroponics', minAmount: 2500, maxAmount: 25000, returns: '10-15%', term: '3 years' },
-    { id: 'pkg-003', name: 'Premium Aquaculture', minAmount: 5000, maxAmount: 50000, returns: '12-18%', term: '5 years' },
-    { id: 'pkg-004', name: 'Diversified Portfolio', minAmount: 10000, maxAmount: 100000, returns: '11-16%', term: 'Mixed' }
+    { id: 'pkg-001', name: 'Starter Poultry', minAmount: 1000, maxAmount: 10000, returns: '8-10%', term: '1 year', image: 'images/poultry.webp' },
+    { id: 'pkg-002', name: 'Growth Hydroponics', minAmount: 2500, maxAmount: 25000, returns: '10-15%', term: '3 years', image: 'images/hydroponics.webp' },
+    { id: 'pkg-003', name: 'Premium Aquaculture', minAmount: 5000, maxAmount: 50000, returns: '12-18%', term: '5 years', image: 'images/aquaculture.webp' },
+    { id: 'pkg-004', name: 'Diversified Portfolio', minAmount: 10000, maxAmount: 100000, returns: '11-16%', term: 'Mixed', image: 'images/portfolio.webp' }
 ];
+
+// function to display investment cards
+function displayInvestmentCards() {
+    const container = document.getElementById('investment-cards');
+    if (!container) return;
+
+    container.innerHTML = investmentPackages.map(pkg => `
+        <div class="card">
+            <img src="${pkg.image}" alt="${pkg.name}" class="card-img">
+            <h3>${pkg.name}</h3>
+            <p><strong>Min:</strong> $${pkg.minAmount.toLocaleString()}</p>
+            <p><strong>Max:</strong> $${pkg.maxAmount.toLocaleString()}</p>
+            <p><strong>Returns:</strong> ${pkg.returns}</p>
+            <p><strong>Term:</strong> ${pkg.term}</p>
+            <a href="#">Learn More →</a>
+        </div>
+    `).join('');
+}
+
 
 // Interest areas array
 const interestAreas = [
@@ -22,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     displayRecentInvestments();
     setupFormValidation();
     setFooterDates();
+    displayInvestmentCards();
 });
 
 // Populate investment packages select
