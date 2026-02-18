@@ -1655,7 +1655,7 @@ footer {
 }
 
 /* High Contrast Mode Support */
-@media (prefers-contrast: high) {
+@media (prefers-contrast: more) {
     :root {
         --primary-color: #000;
         --secondary-color: #000;
